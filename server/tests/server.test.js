@@ -5,7 +5,7 @@ const {app} = require('../server');
 const {Todo} = require('../models/todo');
 
 const todos = [{
-    text: 'Frist test todo'
+    text: 'First test todo'
 }, {
     text: 'Second dummu test todo'
 }];
