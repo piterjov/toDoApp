@@ -1,5 +1,15 @@
 require('./config/config');
 
+const env = process.env.NODE_ENV || 'development';
+console.log('env *** ', env)
+
+if (env === 'development') {
+  process.env.PORT = 3000;
+  process.env.MONGODB_URL = 'mongodb://piterjov:ratep128@ds263137.mlab.com:63137/todoapp';
+} else if (env === 'test') {
+  process.env.PORT = 3000;
+  process.env.MONGODB_URL = 'mongodb://piterjov:ratep128@ds263137.mlab.com:63137/TodoAppTest';
+}
 const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
